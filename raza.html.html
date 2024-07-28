@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raza Tariq - WordPress Developer specializing in creating dynamic and user-friendly websites. Contact for professional web development services.">
+    <meta name="keywords" content="WordPress, Web Development, PHP, HTML, CSS, JavaScript, SEO, Responsive Design">
+    <title>Raza Tariq - WordPress Developer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #d0e6f5; /* Light blue color */
+            color: #333;
+            padding: 20px 0;
+            border-bottom: 4px solid #b3d0e3; /* Slightly darker blue for border */
+        }
+
+        .header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .header nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header nav a:hover {
+            background-color: #b3d0e3;
+            color: #fff;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-me img {
+            border-radius: 50%;
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #d0e6f5; /* Light blue color */
+            color: #333;
+            padding: 20px;
+            border-top: 4px solid #b3d0e3; /* Slightly darker blue for border */
+            margin-top: 20px;
+        }
+
+        .footer-widgets {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-widgets > div {
+            flex: 1;
+            max-width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .footer-widgets .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .footer-widgets .social-icons a {
+            color: #333;
+            text-decoration: none;
+            font-size: 30px; /* Increased icon size */
+            transition: color 0.3s;
+        }
+
+        .footer-widgets .social-icons a:hover {
+            color: #e74c3c;
+        }
+
+        .footer-widgets .location-widget,
+        .footer-widgets .contact-form {
+            background-color: #f0f8ff; /* Very light blue for widgets */
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-widgets .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-widgets .contact-form input,
+        .footer-widgets .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .footer-widgets .contact-form button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .footer-widgets .contact-form button:hover {
+            background-color: #c0392b;
+        }
+
+        .skills {
+            background-color: #eaf4f4;
+            padding: 20px;
+            border: 1px solid #d1e0e0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .skills .skill-item {
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.5em; /* Increased font size */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .skills .skill-item:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-item.wordpress {
+            background-color: #0073e6;
+        }
+
+        .skill-item.html-css {
+            background-color: #f4b400;
+        }
+
+        .skill-item.javascript {
+            background-color: #f0db4f;
+        }
+
+        .skill-item.php {
+            background-color: #777bb3;
+        }
+
+        .skill-item.responsive {
+            background-color: #3b6c2d;
+        }
+
+        .skill-item.seo {
+            background-color: #ff5722;
+        }
+
+        .projects {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 2.5em; /* Increased font size */
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .projects .project {
+            background-color: #3498db;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            font-size: 1.2em; /* Increased font size */
+        }
+
+        .projects .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background-color: #2980b9;
+        }
+
+        .resume {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .resume:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background-color: #fef3f2;
+        }
+
+        .resume h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .resume .resume-section {
+            margin-bottom: 20px;
+        }
+
+        .resume .resume-section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #e74c3c;
+        }
+
+        .resume .resume-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .resume .resume-section ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .resume .resume-section ul li::before {
+            content: "\2022";
+            color: #e74c3c;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .blog {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .blog:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background-color: #fef3f2;
+        }
+
+        .blog h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .blog .blog-post {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog .blog-post h3 {
+            font-size: 1.5em;
+            color: #e74c3c;
+        }
+
+        .blog .blog-post p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="#about-me">Home</a>
+            <a href="#about-me">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about-me" class="section about-me">
+            <h1>About Me</h1>
+            <p>Hello! I'm Raza Tariq, a passionate WordPress developer with a knack for creating dynamic and user-friendly websites. I specialize in various aspects of web development and I'm dedicated to delivering high-quality results.</p>
+        </section>
+
+        <section id="skills" class="section skills">
+            <h2>Skills</h2>
+            <div class="skill-item wordpress">WordPress Development</div>
+            <div class="skill-item html-css">HTML & CSS</div>
+            <div class="skill-item javascript">JavaScript</div>
+            <div class="skill-item php">PHP</div>
+            <div class="skill-item responsive">Responsive Design</div>
+            <div class="skill-item seo">SEO Optimization</div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+
+        <section id="resume" class="section resume">
+            <h2>Resume</h2>
+            <div class="resume-section">
+                <h3>Experience</h3>
+                <ul>
+                    <li>Job Title at Company - Duration</li>
+                    <li>Job Title at Company - Duration</li>
+                    <!-- Add more experiences as needed -->
+                </ul>
+            </div>
+            <div class="resume-section">
+                <h3>Education</h3>
+                <ul>
+                    <li>Degree at Institution - Year</li>
+                    <li>Degree at Institution - Year</li>
+                    <!-- Add more education details as needed -->
+                </ul>
+            </div>
+            <!-- Add more resume sections as needed -->
+        </section>
+
+        <section id="blog" class="section blog">
+            <h2>Blog</h2>
+            <div class="blog-post">
+                <h3>Blog Post Title</h3>
+                <p>Summary of the blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae eros a nisi tincidunt dictum.</p>
+            </div>
+            <!-- Add more blog posts as needed -->
+        </section>
+
+        <section id="contact" class="section contact-info">
+            <h2>Contact Information</h2>
+            <p>Feel free to reach out to me through the following contact details:</p>
+            <p>Email: <a href="mailto:razatariq797@gmail.com">razatariq797@gmail.com</a></p>
+            <p>Phone: +92 344 190 8922</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-widgets">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">F</a> 
+                <a href="https://www.twitter.com" target="_blank">T</a> 
+                <a href="https://www.linkedin.com" target="_blank">L</a>
+            </div>
+            <div class="location-widget">
+                <h3>Location</h3>
+                <p>Khyber Pakhtunkhwa, City Abbottabad,</p>
+                <p>Phone: +92 344 190 8922</p>
+            </div>
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+                <form action="submit_form.php" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
